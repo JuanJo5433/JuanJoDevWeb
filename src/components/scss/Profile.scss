@@ -3,12 +3,18 @@
 
 .containerProfile {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos se alineen verticalmente en pantallas pequeñas */
+    flex-direction: row; /* Alinea los elementos en fila en pantallas grandes */
+    width: 800px;
     align-items: center;
     justify-content: center;
     margin: 0 auto; /* Centra el contenedor horizontalmente */
-    width: 100%; /* Asegura que el contenedor use el ancho completo disponible */
+    height: 100vh; /* Asegura que el contenedor ocupe la altura completa de la pantalla */
 
+    @include respond-to(mobile) {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        width: 100vw; /* Ajusta el ancho al 100% en pantallas pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
 }
 
 .name {
@@ -16,6 +22,7 @@
 
     @include respond-to(mobile) {
         margin-top: 100px;
+        margin-left: -30px;
     }
 }
 
@@ -23,15 +30,16 @@
     color: aquamarine;
     font-family: Khula;
     font-size: 1.5rem;
- 
 }
 
 .info {
     color: white;
     text-align: justify;
-    padding-right: 30px;
 
-    
+    @include respond-to(mobile) {
+        padding-right: 30px;
+        font-size: 15px;
+    }
 }
 
 .console-underscore {
@@ -63,6 +71,7 @@
     @include respond-to(mobile) {
         margin-bottom: 30px;
         display: flex;
+        margin-left: -20px;
         margin-top: -20px;
         justify-content: center;
         align-items: center;
@@ -152,15 +161,12 @@
     margin: 20px 0 0 0;
     display: flex;
     align-items: center;
-    @include respond-to(mobile) {
-        margin: 10px auto;
-    }
 }
 
 .inputProfile {
     min-height: 51px;
     min-width: 200px;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     color: #fff;
     font-size: 15px;
     border: 1px solid #005473;
