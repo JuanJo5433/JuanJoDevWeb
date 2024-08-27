@@ -1,3 +1,5 @@
+@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
+
 .titlePers {
     font-size: 3rem;
     text-shadow: 0 0 5px #7fffd4, 0 0 15px #6cd2b0, 0 0 20px #5cb99a,
@@ -7,7 +9,8 @@
 
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
-    @media only screen and (max-width: 768px) {
+    @include respond-to(mobile) {
+
         font-size: 3rem;
         text-align: center;
     }

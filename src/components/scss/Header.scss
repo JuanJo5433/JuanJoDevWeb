@@ -1,5 +1,7 @@
-header {
-    width: 100%; /* Asegura que el ancho del header sea siempre el del viewport */
+@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
+
+.header {
+    width: 100vw; /* Asegura que el ancho del header sea siempre el del viewport */
     height: 3.5rem; /* Altura del header */
     display: flex;
     position: fixed;
@@ -16,19 +18,20 @@ header {
     padding: 0 1rem;
     box-sizing: border-box;
 
-    @media only screen and (max-width: 768px) {
-        height: 80px; /* Ajusta la altura para pantallas más pequeñas */
+@include respond-to(mobile) {
+        height: 50px; /* Ajusta la altura para pantallas más pequeñas */
+        justify-content: center;
     }
 }
 
-header a {
+.header a {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #7fffd4;
 }
 
-header nav {
+.header nav {
     width: 100%;
     max-width: 1200px; /* Puedes ajustar este valor según el ancho máximo deseado */
     margin: 0 auto;
@@ -37,26 +40,26 @@ header nav {
     gap: 1rem;
     flex-wrap: wrap;
 
-    @media only screen and (max-width: 768px) {
+@include respond-to(mobile) {
         align-items: center; /* Centra los enlaces en pantallas pequeñas */
     }
 }
 
-header nav a {
+.header nav a {
     font-size: 0.875rem; /* text-sm */
     font-weight: 500; /* font-medium */
     text-decoration: none;
     transition: color 0.3s;
     padding: 0.5rem 1rem; /* Añade un poco de padding para mejor clicabilidad */
     
-    @media only screen and (max-width: 768px) {
+@include respond-to(mobile) {
         padding: 0rem; /* Ajusta el padding para pantallas más pequeñas */
         font-size: 12px;
 
     }
 }
 
-header nav a:hover {
+.header nav a:hover {
     color: #38bdf8;
 }
 

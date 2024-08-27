@@ -1,9 +1,9 @@
 html,
 body {
     margin: 0;
-    background-color: #0b0b0b;
+
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+
     font-family: var(--space-mono);
     scroll-behavior: smooth;
-    
-
 }

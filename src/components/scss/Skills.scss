@@ -1,15 +1,26 @@
-.containerSkills{
+@import '../../scss/abstracts/mixins'; 
+
+.containerSkills {
     display: flex;
+    flex-direction: column; /* Asegura que los elementos se alineen verticalmente en pantallas pequeñas */
     align-items: center;
     justify-content: center;
     margin-top: 200px;
-    margin: 0 auto ; /* Centra el contenedor horizontalmente */
-    flex-direction: column;
-   
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    width: 100%; /* Asegura que el contenedor use el ancho completo disponible */
+
+    @include respond-to(mobile) {
+        margin-top: 100px; /* Ajusta el margen superior para pantallas más pequeñas */
+    }
 }
-.containerCardSkills{
+
+.containerCardSkills {
     display: flex;
-    @media only screen and (max-width: 768px) {
-        flex-direction: column;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+
+    @include respond-to(mobile) {
+        flex-direction: column; /* Apila las tarjetas verticalmente en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas horizontalmente */
     }
 }

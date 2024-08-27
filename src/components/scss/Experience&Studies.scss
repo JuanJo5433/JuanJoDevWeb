@@ -1,3 +1,5 @@
+@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
+
 .ExperienceStudiesContainer {
     display: flex;
     align-items: center;
@@ -8,7 +10,7 @@
 }
 .ExperienceStudiesContent {
     display: flex;
-     @media only screen and (max-width: 768px) {
+    @include respond-to(mobile) {
         flex-direction: column;
     }
 }
@@ -24,7 +26,13 @@
     box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho y alto total */
     flex-direction: column;
     transition: all 0.3s;
-    
+    @include respond-to(mobile) {
+
+        width: auto;
+        max-width: 80vw;
+        height: auto;
+        margin: 10px auto;
+    }
     
 
     h1 {

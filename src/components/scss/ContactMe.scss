@@ -1,9 +1,12 @@
+@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
+
 .contactMeContainer{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     flex-direction: column;
+    
     
 }
 .contactMeContent{
@@ -17,10 +20,13 @@
 
     box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho y alto total */
     flex-direction: column;
-     @media only screen and (max-width: 768px) {
-      width: 420px;
+    @include respond-to(mobile) {
 
-    }
+      width: auto;
+      max-width: 80vw;
+      height: auto;
+      margin: 10px auto;
+  }
 }
 
 .form {

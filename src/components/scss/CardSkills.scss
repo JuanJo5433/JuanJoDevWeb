@@ -1,3 +1,5 @@
+@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
+
 .cardSkills {
     background-color: #0f1a29;
     color: #FFFFFF;
@@ -9,10 +11,12 @@
     margin: 10px;
     box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho y alto total */
     transition: all 0.3s;
-    @media only screen and (max-width: 768px) {
-       margin: 40px 50px;
-       width: 420px;
-       height: auto;
+    @include respond-to(mobile) {
+
+        width: auto;
+        max-width: 80vw;
+        height: auto;
+        margin: 10px auto;
     }
    
 

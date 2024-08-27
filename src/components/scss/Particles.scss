@@ -1,10 +1,7 @@
 
-  body {
-    background: linear-gradient(to bottom, #0f172a, #1e293b);
-    
+@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
 
-  
-}
+
   
   .firefly {
     position: fixed;

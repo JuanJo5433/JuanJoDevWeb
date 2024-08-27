@@ -1,4 +1,4 @@
-/* Studie.scss */
+@import '../../scss/abstracts/mixins'; 
 
 .titleStudie {
     margin-left: 20px;
@@ -51,33 +51,6 @@
         p {
             font-size: 14px;
             margin-bottom: 30px;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .titleStudie {
-        margin-left: 5px;
-
-        h1 {
-            font-size: 16px;
-        }
-    }
-
-    .rolStudie {
-        margin: 0 10px;
-
-        h2 {
-            font-size: 12px;
-        }
-    }
-
-    .descripStudie {
-        margin: 0 10px;
-
-        p {
-            font-size: 12px;
-            margin-bottom: 20px;
         }
     }
 }
