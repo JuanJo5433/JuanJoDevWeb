@@ -1,0 +1,58 @@
+/* App.scss */
+
+/* General Styles */
+
+  
+  body {
+    margin: 0;
+   
+  }
+  
+  /* Make sure content and background fill the viewport */
+  .content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main {
+    flex: 1;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    section {
+      padding: 15px;
+    }
+  
+    /* Header adjustments */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Adjustments for other components if necessary */
+    .profile, .projects, .skills, .experience, .contact {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+ 
+  
+    section {
+      padding: 10px;
+    }
+  
+   
+  
+    /* More adjustments for specific components */
+  }
+  

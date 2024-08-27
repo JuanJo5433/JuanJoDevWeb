@@ -1,0 +1,15 @@
+.containerSkills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin: 0 auto ; /* Centra el contenedor horizontalmente */
+    flex-direction: column;
+   
+}
+.containerCardSkills{
+    display: flex;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,62 @@
+header {
+    width: 100%; /* Asegura que el ancho del header sea siempre el del viewport */
+    height: 3.5rem; /* Altura del header */
+    display: flex;
+    position: fixed;
+    top: 0; /* Asegura que el header esté fijo en la parte superior */
+    left: 0; /* Asegura que el header esté alineado al borde izquierdo */
+    align-items: center;
+    color: #38bdf8;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.028);
+    z-index: 99;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 768px) {
+        height: 80px; /* Ajusta la altura para pantallas más pequeñas */
+    }
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7fffd4;
+}
+
+header nav {
+    width: 100%;
+    max-width: 1200px; /* Puedes ajustar este valor según el ancho máximo deseado */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centra los enlaces en el nav */
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 768px) {
+        align-items: center; /* Centra los enlaces en pantallas pequeñas */
+    }
+}
+
+header nav a {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem; /* Añade un poco de padding para mejor clicabilidad */
+    
+    @media only screen and (max-width: 768px) {
+        padding: 0rem; /* Ajusta el padding para pantallas más pequeñas */
+        font-size: 12px;
+
+    }
+}
+
+header nav a:hover {
+    color: #38bdf8;
+}
+

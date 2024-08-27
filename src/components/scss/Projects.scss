@@ -1,0 +1,23 @@
+.containerProjects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    margin-top: 70px;
+    flex-direction: column;
+    @media only screen and (max-width: 768px) {
+
+    }
+   
+  
+}
+.containerCardProjects{
+    display: flex;
+
+    flex-direction: row;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;        
+
+    }
+    
+}

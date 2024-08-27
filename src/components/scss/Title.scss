@@ -1,0 +1,60 @@
+.titlePers {
+    font-size: 3rem;
+    text-shadow: 0 0 5px #7fffd4, 0 0 15px #6cd2b0, 0 0 20px #5cb99a,
+        0 0 40px #4a987e, 0 0 60px #4e8182, 0 0 10px #3a6465, 0 0 98px #338487;
+    color: #ffffff;
+    margin-top: 100px;
+
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+    @media only screen and (max-width: 768px) {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+@-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #7fffd4, 0 0 15px #6cd2b0, 0 0 20px #5cb99a,
+            0 0 40px #4a987e, 0 0 60px #4e8182, 0 0 10px #3a6465,
+            0 0 98px #338487;
+        color: #ffffff;
+    }
+}
+
+@keyframes blink {
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #7fffd4, 0 0 15px #6cd2b0, 0 0 20px #5cb99a,
+            0 0 40px #4a987e, 0 0 60px #4e8182, 0 0 10px #3a6465,
+            0 0 98px #338487;
+        color: #ffffff;
+    }
+}
