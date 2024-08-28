@@ -4,51 +4,51 @@ import "./scss/ContactMe.scss";
 
 const ContactMe = () => {
     return (
-        <div className="contactMeContainer">
+        <div className="contactMeContainer" data-aos="flip-up">
             <Title title={"Contacto"} />
             <div className="contactMeContent">
-                <div class="form-card1">
-                    <div class="form-card2">
-                        <form class="form">
+                <div className="form-card1">
+                    <div className="form-card2">
+                        <form className="form">
 
-                            <div class="form-field">
+                            <div className="form-field">
                                 <input
                                     required=""
                                     placeholder="Name"
-                                    class="input-field"
+                                    className="input-field"
                                     type="text"
                                 />
                             </div>
 
-                            <div class="form-field">
+                            <div className="form-field">
                                 <input
                                     required=""
                                     placeholder="Email"
-                                    class="input-field"
+                                    className="input-field"
                                     type="email"
                                 />
                             </div>
 
-                            <div class="form-field">
+                            <div className="form-field">
                                 <input
                                     required=""
                                     placeholder="Subject"
-                                    class="input-field"
+                                    className="input-field"
                                     type="text"
                                 />
                             </div>
 
-                            <div class="form-field">
+                            <div className="form-field">
                                 <textarea
                                     required=""
                                     placeholder="Message"
                                     cols="30"
                                     rows="10"
-                                    class="input-field"
+                                    className="input-field"
                                 ></textarea>
                             </div>
 
-                            <button class="sendMessage-btn">
+                            <button className="sendMessage-btn">
                                 Send Message
                             </button>
                         </form>

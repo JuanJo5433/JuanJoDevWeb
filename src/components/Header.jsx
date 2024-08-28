@@ -6,7 +6,7 @@ const Header = () => {
         <header className="header">
             <nav className="nav">
               
-                <a href="#projects" className="nav-link">
+                <a href="#projects" className="navLink">
                     Proyectos
                 </a>
                 <a href="#skills" className="nav-link">

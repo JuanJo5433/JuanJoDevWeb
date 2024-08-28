@@ -1,18 +1,17 @@
 import React from "react";
 import './scss/CardProjects.scss'
 
-const CardProjects = () => {
+const CardProjects = ({title, img, descrip}) => {
     return (
         <div className="cardProject">
             <div className="titleCardProject">
-                <h1>Proyecto</h1>
+                <h1>{title || "Proyecto"}</h1>
             </div>
             <div className="imgCardProject">
-                <img src="https://generated.vusercontent.net/placeholder.svg" alt="Img Project" />
+                <img src={img || "https://generated.vusercontent.net/placeholder.svg"} alt="Img Project" />
             </div>
             <div className="descripCardProject">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti, sit non error repudiandae ist
+               { descrip ||" Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sit non error repudiandae ist"}
             </div>
         </div>
     );

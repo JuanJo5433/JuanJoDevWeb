@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./scss/Profile.scss";
-import userPhoto from "../assets/userPhoto.png";
+import userPhoto from "../assets/userPhoto.jpg";
 import Title from "./Title";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LuGithub, LuClipboardCopy } from "react-icons/lu";
@@ -82,13 +82,17 @@ const Profile = () => {
     return (
         <div className="containerProfile">
             <section className="infoProfile">
-                <div className="name">
+                <div className="name" data-aos="fade-right">
                     <Title title={"JuanJoDev"} />
                 </div>
                 <div className="imgUserResposive">
-                    <img src={userPhoto} alt="Photo JuanJoDev" />
+                    <img
+                        src={userPhoto}
+                        alt="Photo JuanJoDev"
+                        data-aos="fade-left"
+                    />
                 </div>
-                <div className="rol">
+                <div className="rol" data-aos="fade-left">
                     <span id="text" ref={textRef}></span>
                     <div
                         className="console-underscore"
@@ -98,7 +102,7 @@ const Profile = () => {
                         &#95;
                     </div>
                 </div>
-                <div className="info">
+                <div className="info" data-aos="fade-right">
                     <p>
                         {" "}
                         Soy una persona apasionada, destacada por mi dedicación
@@ -110,27 +114,48 @@ const Profile = () => {
                 </div>
                 <div className="socialProfile">
                     <div className="socialButtonsProfile">
-                        <button className="buttonProfile">
-                            <FaLinkedinIn />
-                        </button>
-                        <button className="buttonProfile">
-                            <LuGithub />
-                        </button>
-                        <button className="buttonProfile">
+                        <a
+                            href={
+                                "https://www.linkedin.com/in/juan-jose-giraldo-6a199520a"
+                            }
+                            target="_blank"
+                        >
+                            <button
+                                className="buttonProfile"
+                                data-aos="fade-up-right"
+                            >
+                                <FaLinkedinIn />
+                            </button>
+                        </a>
+                        <a
+                            href={"https://github.com/JuanJo5433"}
+                            target="_blank"
+                        >
+                            <button
+                                className="buttonProfile"
+                                data-aos="fade-up"
+                            >
+                                <LuGithub />
+                            </button>
+                        </a>
+                        <button
+                            className="buttonProfile"
+                            data-aos="fade-up-left"
+                        >
                             <a href={cv} download={"CV JUAN JOSE GC.pdf"}>
                                 <TbFileCv />
                             </a>
                         </button>
                     </div>
 
-                    <div className="inputGroupProfile">
+                    <div className="inputGroupProfile" data-aos="fade-up">
                         <input
                             type="email"
                             className="inputProfile"
                             id="Email"
                             name="Email"
                             value="juanjosegiraldo1001@gmail.com"
-                            autocomplete="off"
+                            autoComplete="off"
                             disabled
                         />
                         <button
@@ -144,7 +169,7 @@ const Profile = () => {
                     </div>
                 </div>
             </section>
-            <section className="imgUser">
+            <section className="imgUser" data-aos="fade-up">
                 <img src={userPhoto} alt="Photo JuanJoDev" />
             </section>
         </div>

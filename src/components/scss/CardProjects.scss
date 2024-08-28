@@ -1,16 +1,18 @@
-@import '../../scss/abstracts/mixins'; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
+@import "../../scss/abstracts/mixins"; // Asegúrate de que este import esté en la parte superior si `respond-to` está en un archivo separado
 .cardProject {
     background-color: #0f1a29;
     color: #ffffff;
     width: 400px;
-    height: 360px;
+    height: 500px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin: 10px;
     transition: all 0.3s;
     border: 1px #5cb99a2a solid;
-@include respond-to(mobile) {
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    @include respond-to(mobile) {
         width: auto;
         max-width: 80vw;
         height: 380px;
@@ -35,7 +37,7 @@
     width: 380px;
     height: 200px;
     object-fit: cover;
-@include respond-to(mobile) {
+    @include respond-to(mobile) {
         max-width: 400px;
         height: 200px;
         margin: 0 10px;

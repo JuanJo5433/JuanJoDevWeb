@@ -5,7 +5,7 @@ import { SiNextdotjs, SiPostman } from "react-icons/si";
 import { DiPostgresql } from "react-icons/di";
 import { FaLaravel, FaGitAlt, FaHtml5, FaCss3, FaJsSquare, FaReact, FaSass, FaBootstrap, FaPython, FaPhp, FaNodeJs  } from "react-icons/fa";
 
-const CardSkills = ({ title, type }) => {
+const CardSkills = ({ title, type, dataAos="fade-up" }) => {
     // Define los íconos para cada tipo
     const frontEndIcons = (
         <ul>
@@ -43,7 +43,7 @@ const CardSkills = ({ title, type }) => {
 
     // Renderiza íconos basado en el tipo
     return (
-        <div className="cardSkills">
+        <div className="cardSkills" data-aos={dataAos}>
             <div className="titleCardSkills">
                 <h1>{title}</h1>
             </div>

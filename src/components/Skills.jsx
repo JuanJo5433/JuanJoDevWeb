@@ -8,9 +8,9 @@ const Skills = () => {
         <div className="containerSkills">
             <Title title={"Habilidades"} />
             <div className="containerCardSkills">
-                <CardSkills title={"Front-End"} type={"front"} />
-                <CardSkills title={"Back-End"} type={"back"} />
-                <CardSkills title={"Herramientas"} type={"tools"} />
+                <CardSkills title={"Front-End"} type={"front"} dataAos={"zoom-out-right"} />
+                <CardSkills title={"Back-End"} type={"back"} dataAos={"zoom-out-down"}/>
+                <CardSkills title={"Herramientas"} type={"tools"} dataAos={"zoom-out-left"} />
             </div>
         </div>
     );
