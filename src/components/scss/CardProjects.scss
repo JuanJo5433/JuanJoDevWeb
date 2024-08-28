@@ -15,7 +15,7 @@
     @include respond-to(mobile) {
         width: auto;
         max-width: 80vw;
-        height: 380px;
+        height: 500px;
         margin: 10px auto;
     }
 }
@@ -41,6 +41,8 @@
         max-width: 400px;
         height: 200px;
         margin: 0 10px;
+        width: 70vw;
+
     }
 }
 .descripCardProject {
