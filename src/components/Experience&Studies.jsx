@@ -13,7 +13,7 @@ const ExperienceStudies = () => {
                 <h1>Experiencia</h1>
                 <Experience company={"GLOBANT"} time={"2024"} rol={"Front-End Developer"} descrip={"Durante mis prácticas en esta empresa, desarrollé diversos proyectos que me permitieron consolidar mis conocimientos y habilidades. Además, completé varios cursos que enriquecieron mi formación, mejorando tanto mis competencias como programador como mis habilidades personales."}/>
                 
-                <Experience company={"GOBERNACION DE RISARALDA"} time={"2023"} rol={"Back-End Developer"} descrip={"Participé en el desarrollo de un proyecto para la gestión de inventario de equipos electrónicos en el área de educación, con el propósito de mejorar el seguimiento y control de cada equipo perteneciente a la entidad."}/>
+                {/* <Experience company={"GOBERNACION DE RISARALDA"} time={"2023"} rol={"Back-End Developer"} descrip={"Participé en el desarrollo de un proyecto para la gestión de inventario de equipos electrónicos en el área de educación, con el propósito de mejorar el seguimiento y control de cada equipo perteneciente a la entidad."}/> */}
               </div>
               <div className="studiesContainer" data-aos="flip-right">
                 <h1>Estudios</h1>
