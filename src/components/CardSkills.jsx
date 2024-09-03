@@ -3,7 +3,7 @@ import './scss/CardSkills.scss';
 import { GrMysql } from "react-icons/gr";
 import { SiNextdotjs, SiPostman } from "react-icons/si";
 import { DiPostgresql } from "react-icons/di";
-import { FaLaravel, FaGitAlt, FaHtml5, FaCss3, FaJsSquare, FaReact, FaSass, FaBootstrap, FaPython, FaPhp, FaNodeJs  } from "react-icons/fa";
+import { FaLaravel, FaGitAlt, FaHtml5, FaCss3, FaJsSquare, FaReact, FaSass, FaBootstrap, FaPython, FaPhp, FaNodeJs, FaJira, FaSlack, FaFigma, FaGithub    } from "react-icons/fa";
 
 const CardSkills = ({ title, type, dataAos="fade-up" }) => {
     // Define los íconos para cada tipo
@@ -32,11 +32,11 @@ const CardSkills = ({ title, type, dataAos="fade-up" }) => {
 
     const toolsIcons = (
         <ul>
-            <li><a href="#"><i className="fa-brands fa-jira"></i></a></li>
-            <li><a href="#"><i className="fa-brands fa-slack"></i></a></li>
-            <li><a href="#"><i className="fa-brands fa-figma"></i></a></li>
-            <li><a href="#"><i className="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i ><FaJira className="Icon"/></i></a></li>
+            <li><a href="#"><i ><FaSlack className="Icon"/></i></a></li>
+            <li><a href="#"><i ><FaFigma  className="Icon"/></i></a></li>
             <li><a href="#"><i ><FaGitAlt className="Icon"/></i></a></li>
+            <li><a href="#"><i ><FaGithub  className="Icon"/></i></a></li>
             <li><a href="#"><i><SiPostman  className="Icon"/></i></a></li>
         </ul>
     );

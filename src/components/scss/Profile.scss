@@ -16,7 +16,9 @@
         height: auto; /* Ajusta la altura automáticamente */
     }
 }
-
+.infoProfile{
+    margin-top: -40px;
+}
 .name {
     margin-top: -50px;
 
@@ -34,7 +36,7 @@
 
 .info {
     color: white;
-    text-align: justify;
+    text-align: left;
 
     @include respond-to(mobile) {
         padding-right: 30px;
@@ -51,11 +53,12 @@
 
 .imgUser {
     margin-left: 40px;
+    margin-top: 20px;
     display: flex;
 
     img {
-        width: 400px;
-        height: 400px;
+        width: 440px;
+        height: 440px;
         object-fit: cover;
         border-radius: 10px;
     }
@@ -161,6 +164,7 @@
     margin: 20px 0 0 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .inputProfile {
