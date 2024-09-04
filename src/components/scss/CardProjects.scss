@@ -4,6 +4,7 @@
     color: #ffffff;
     width: 400px;
     height: auto;
+    min-height: 460px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -15,7 +16,8 @@
     @include respond-to(mobile) {
         width: auto;
         max-width: 80vw;
-        height: 500px;
+        min-height: 460px;
+        height: auto;
         margin: 10px auto;
     }
 }
@@ -65,7 +67,7 @@
     button {
         all: unset;
         padding: 0;
-        margin: 0 15px;
+        margin: 0 15px 20px 15px;
         cursor: pointer;
         &:hover{
             color: #5cb99a;
@@ -74,7 +76,7 @@
 
 }
 .buttonsGroupProject {
-    margin: 20px 15px;
+    margin: auto 15px 20px 15px;
     display: flex;
 }
 .buttonCodeView {

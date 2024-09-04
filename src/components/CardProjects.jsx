@@ -1,18 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./scss/CardProjects.scss";
 
 const CardProjects = ({ title, img, descrip, code, demo }) => {
-    const [moreText, setMoreText] = useState("line-clamp")
-    const [moreTextButton, setMoreTextButton] = useState("Ver mas")
-    const handleMoreText = () =>{
-        if(moreText === "line-clamp"){
-            setMoreText("")
-            setMoreTextButton("Ver menos")
-        }else{
-            setMoreText("line-clamp")
-            setMoreTextButton("Ver mas")
+    const [moreText, setMoreText] = useState("line-clamp");
+    const [moreTextButton, setMoreTextButton] = useState("Ver mas");
+    const [numberOfLines, setNumberOfLines] = useState(0);
+    const handleMoreText = () => {
+        if (moreText === "line-clamp") {
+            setMoreText("");
+            setMoreTextButton("Ver menos");
+        } else {
+            setMoreText("line-clamp");
+            setMoreTextButton("Ver mas");
         }
-    }
+    };
+
+    const textRef = useRef(null);
+
+    useEffect(() => {
+        if (textRef.current) {
+            const elementHeight = textRef.current.scrollHeight;
+
+            // Obtén el valor de lineHeight en píxeles
+            const computedStyle = getComputedStyle(textRef.current);
+            let lineHeight = computedStyle.lineHeight;
+
+            // Convierte lineHeight a un número si es necesario
+            if (lineHeight === "normal") {
+                // Usa un valor predeterminado, por ejemplo, 1.2em (ajústalo según tus necesidades)
+                lineHeight =
+                    parseFloat(getComputedStyle(textRef.current).fontSize) *
+                    1.5;
+            } else {
+                // Si lineHeight es en píxeles (px), conviértelo a número
+                lineHeight = parseFloat(lineHeight);
+            }
+
+            const lines = Math.ceil(elementHeight / lineHeight);
+            setNumberOfLines(lines);
+            console.log(elementHeight);
+            console.log(lineHeight);
+            console.log(lines);
+        }
+    }, []);
+
     return (
         <div className="cardProject">
             <div className="titleCardProject">
@@ -28,16 +59,18 @@ const CardProjects = ({ title, img, descrip, code, demo }) => {
                 />
             </div>
             <div className={`descripCardProject ${moreText}`}>
-                <p>
+                <p ref={textRef}>
                     {descrip ||
                         " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sit non error repudiandae ist"}
                 </p>
-              
             </div>
-            <div className="buttonMoreContent">
-
-            <button onClick={handleMoreText}>[{moreTextButton}]</button>
-            </div>
+            {numberOfLines > 4 ? (
+                <div className="buttonMoreContent">
+                    <button onClick={handleMoreText}>[{moreTextButton}]</button>
+                </div>
+            ) : (
+                ""
+            )}
 
             <div className="buttonsGroupProject">
                 <a href={code} target="_blank">

@@ -36,6 +36,8 @@ const Projects = () => {
                         />
                  
                 </div>
+               
+               
                 {/* <div data-aos="fade-left">
                     <CardProjects
                         title={"Cooming soon..."}
