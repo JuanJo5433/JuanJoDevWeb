@@ -38,9 +38,7 @@ const CardProjects = ({ title, img, descrip, code, demo }) => {
 
             const lines = Math.ceil(elementHeight / lineHeight);
             setNumberOfLines(lines);
-            console.log(elementHeight);
-            console.log(lineHeight);
-            console.log(lines);
+       
         }
     }, []);
 

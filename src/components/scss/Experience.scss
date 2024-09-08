@@ -52,8 +52,10 @@
     animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .contentExperienceHidden {
-    animation: flicker-out-1 0.5s linear both;
-    // content-visibility: hidden;
+    //   animation: flicker-out-1 0.5s linear both;
+    content-visibility: hidden;
+    position: absolute;
+
 }
 .rolExperience {
     margin-left: 40px;

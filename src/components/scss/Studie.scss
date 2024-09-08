@@ -1,28 +1,71 @@
-@import '../../scss/abstracts/mixins'; 
+@import "../../scss/abstracts/mixins";
+
 
 .titleStudie {
-    margin-left: 20px;
-
-    h1 {
-        font-size: 22px;
-        color: #00688E;
-    }
+  display: flex;
+  margin: 0 50px 0 20px;
+  button {
+    all: initial;
+  }
+  h1 {
+    font-size: 22px;
+    color: #00688e;
+  }
+  svg {
+    margin-top: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+.buttonOpenStudie {
+  animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.buttonCloseStudie {
+  animation: rotate-90-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes rotate-90-cw {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
+@keyframes rotate-90-ccw {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.buttonCloseStudie {
+  transform: rotate(0deg);
+}
+.contentStudieVisible {
+  content-visibility: visible;
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.contentStudieHidden {
+//   animation: flicker-out-1 0.5s linear both;
+  content-visibility: hidden;
+  position: absolute;
+}
 .rolStudie {
-    margin: 0 40px;
+  margin: 0 40px;
 
-    h2 {
-        font-size: 16px;
-    }
+  h2 {
+    font-size: 16px;
+  }
 }
 
 .descripStudie {
-    margin: 0 60px;
+  margin: 0 60px;
 
-    p {
-        text-align: justify;
-        font-size: 15px;
-        margin-bottom: 60px;
-    }
+  p {
+    text-align: justify;
+    font-size: 15px;
+    margin-bottom: 60px;
+  }
 }
